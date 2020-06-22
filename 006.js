@@ -3,24 +3,17 @@
 <TITLE>Rekursif</TITLE>
 </HEAD>
 <BODY>
-<PRE>
-<script type="text/javascript">
-
-var baris, i = 0;
-var nilai_prompt = prompt("Tinggi: ", 0);
-var tinggi = parseInt(nilai_prompt);
-for (baris = 1; baris <= tinggi ; baris++) {
-
-for (i = 1; i <= tinggi - baris; i++) {
-document.write(" ");
+  <script type="text/javascript">
+function faktorial(n) {
+if (n == 0)
+return(1);
+else
+return( n * faktorial(n-1));
 }
-for (i = 1; i < 2 * baris; i++) {
-document.write("*");
-}
-document.write("\n");
-}
+var z = 77;
+document.write("4! = " + faktorial(4));
 
 </SCRIPT>
-</PRE>
 </BODY>
 </HTML>
+
