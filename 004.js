@@ -1,27 +1,59 @@
-<html>
+<!--<html>
+<head>
+<title>Palindrome </title>
+<script type='text/javascript'>-->
+  const isPalindrome = string => {
+    const validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
+    const stringCharacters = string
+        .toLowerCase()
+        .split("")
+        .reduce(
+            (characters, character) =>
+                validCharacters.indexOf(character) > -1
+                    ? characters.concat(character)
+                    : characters,
+            []
+        );
+    return stringCharacters.join("") === stringCharacters.reverse().join("");
+};
 
-<body>
-  <script type="text/javascript">
-    function checkPalindrome() {
-      var revStr = "";
-      var str = document.getElementById("str").value;
-      var i = str.length;
-      for (var j = i; j >= 0; j--) {
-        revStr = revStr + str.charAt(j);
-      }
-      if (str !== revStr) {
-        alert("True");
-      } else {
-        alert("False");
-      }
-    }
-  </script>
-  <form>
+const _isPalindrome = string =>
+    string
+        .split("")
+        .every((character, index) => character === string[string.length - 1 - index]);
 
-    palindrome <input type="text" id="str" name="string" />
-    <br />
-    <input type="submit" value="Check" onclick="checkPalindrome();" />
-  </form>
+const __isPalindrome = string => {
+    const cleaned = string.replace(/\W/g, "").toLowerCase();
+
+    return (
+        cleaned ===
+        cleaned
+            .split("")
+            .reverse()
+            .join("")
+    );
+};
+
+mocha.setup("bdd");
+const { assert } = chai;
+
+describe("Palindrome", () => {
+    it("Should return true", () => {
+        assert.equal(isPalindrome("Cigar? Toss it in a can. It is so tragic"), true);
+        assert.equal(
+            __isPalindrome("Cigar? Toss it in a can. It is so tragic"),
+            true
+        );
+    });
+
+    it("Should return false", () => {
+        assert.equal(isPalindrome("Hello World"), false);
+        assert.equal(_isPalindrome("Hello World"), false);
+    });
+});
+
+
+<!--</script>
+
 </body>
-
-</html>
+</html>-->
