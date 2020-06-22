@@ -15,5 +15,6 @@ function removeDuplicates(city) {
 var Mycity = ["Jakarta", "Aceh", "Malang", "Medan", "Bontang", "Jogja", "Jakarta", "Bandung", "Malang", "Solo", "Palembang", "Bandung"];
               
 result = removeDuplicates(Mycity);
+console.log(Mycity);
 
 console.log(result);
