@@ -1,5 +1,11 @@
  
-function ReverseString(str) { 
+<!--<HTML>
+<HEAD>
+<TITLE>Rekursif</TITLE>
+</HEAD>
+<BODY>
+<script type="text/javascript">-->
+ function ReverseString(str) { 
   
     if(!str || str.length <2 ||  
             typeof str!== 'string') { 
@@ -21,5 +27,6 @@ function ReverseString(str) {
   
 document.write(ReverseString("semua kata-kata")) 
 
-
- 
+<!--</SCRIPT>
+</BODY>
+</HTML>-->
