@@ -1,4 +1,4 @@
-<script> 
+ 
 function ReverseString(str) { 
   
     if(!str || str.length <2 ||  
@@ -20,6 +20,6 @@ function ReverseString(str) {
 } 
   
 document.write(ReverseString("semua kata-kata")) 
-</script> 
+
 
  
